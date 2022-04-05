@@ -82,3 +82,16 @@ async function obtainFromServer(){
 obtainFromServer();
 
 // use insertAdjacentElement('afterbegin', element) to add each new post to top of page
+
+// JS for light to dark toggle switch
+let themeToggler = document.getElementById('theme-toggler');
+
+themeToggler.onclick = () => {
+  themeToggler.classList.toggle('fa-sun');
+
+  if (themeToggler.classList.contains('fa-sun')) {
+    document.body.classList.add('active');
+  } else {
+    document.body.classList.remove('active');
+  }
+};
