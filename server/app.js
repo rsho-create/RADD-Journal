@@ -1,12 +1,12 @@
 const express = require('express')
 const app = express()
 const cors = require('cors');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 
 app.use(cors());
 
-//Saying we will be using json data throughout our application
-app.use(bodyParser.json());
+// //Saying we will be using json data throughout our application
+// app.use(bodyParser.json());
 
 const errorMsg = {"error: ": "Invalid site name"}
 
