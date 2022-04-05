@@ -1,11 +1,16 @@
 const express = require('express')
 const app = express()
 const cors = require('cors');
+const bodyParser = require('body-parser');
 
 app.use(cors());
 
+//Saying we will be using json data throughout our application
+app.use(bodyParser.json());
+
 const errorMsg = {"error: ": "Invalid site name"}
 
+// this is the root route
 app.get('/', (req, res) => {
     try {
         res.statusCode = 200;
@@ -16,8 +21,6 @@ app.get('/', (req, res) => {
     }
   
 })
-
-
 
 //exporting
 module.exports = app
