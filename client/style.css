@@ -15,6 +15,7 @@ body {
     color: whitesmoke;
     text-decoration: none;
 }
+
 /* comment section */
 #commentsDiv {
     display: flex;
@@ -70,25 +71,95 @@ textarea {
     text-decoration: none;
 }
 /* dark mode */
+:root {
+    --body-color: #161616;
+    --text-color: wheat;
+}
+
 body.active {
-    padding-top: 60px;
-    padding-bottom: 40px;
-    color: black;
-    background-color: white;
+    background-color: wheat;
+    color: #161616;
+    --body-color: wheat;
+    --text-color: #161616;
+}
+#theme-toggler {
+    position: fixed;
+    top: 15px;
+    right: 25px;
+    padding: 15px 20px;
+    font-size: 30px;
+    background: var(--text-color);
+    color: var(--body-color);
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
   }
-  body.active {
-  --body-color: ;
-  --text-color: red;
+
+  /* popup window CSS */
+  media ="screen"
+
+  *,
+  *:before,
+  *:after{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
   }
-  #theme-toggler {
-  position: absolute;
-  top: 15px;
-  right: 25px;
-  padding: 15px 20px;
-  font-size: 30px;
-  background: var(--body-color);
-  color: var(--text-color);
-  cursor: pointer;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
+  
+  /* body{
+      background-color: #0855ae; */
   }
+  
+  .popup{
+      background-color: #161616;
+      width: 370px;
+      padding: 30px 40px;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+      border-radius: 8px;
+      display: none;
+      text-align: center;
+  }
+  
+  .popup button{
+      display: block;
+      margin: 0 0 20px auto;
+      background-color: transparent;
+      font-size: 30px;
+      color: #161616;
+      background: wheat;
+      border-radius: 100%;
+      width: 40px;
+      height: 40px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+  }
+  
+  .popup h1{
+      margin-top: -20px;
+      text-align: center;
+      color: wheat;
+  }
+  
+  .popup hr {
+      height: 1px;
+      background-color: white;
+      border: none;
+  }
+  
+  .popup h2{
+      text-align: center;
+      color: wheat;
+  }
+  
+  .popup p{
+      font-size: 25px;
+      text-align: justify;
+      margin: 20px 0;
+      line-height: 25px;
+      color: wheat;
+  }
+    

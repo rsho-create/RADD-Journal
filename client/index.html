@@ -20,6 +20,19 @@
 
 
   <body onload="getAllPosts()">
+
+    <!-- popup window html -->
+    
+    <div class="popup" style="background-color: #161616">
+      <button id="close">&times;</button>
+      <h1>Welcome to <img src="" alt=""></h1>
+      <hr>
+      <p>Radd Journal was built with the intention of starting conversations and building communities. We want our users to feel comfortable voicing their opinions, share their thoughts and display unique personalities. Whether you want serious conversations, or to start a light-hearted debate, we have channels and communities for everyone.</p>
+      <h2>Community Rules</h2>
+      <p>This platform is intended to be an open space where our users can connect with each other through honest conversation. While we actively and openly encourage freedom of speech, we request our users treat each other with respect, in order to make this a place for everyone and anyone. 
+      </p>
+
+  </div>
     
       <!-- logo -->
       <nav>
@@ -91,6 +104,36 @@
         </div>
       </div>
     </footer>
+    <script>
+let themeToggler = document.getElementById('theme-toggler');
+
+themeToggler.onclick = () => {
+  themeToggler.classList.toggle('fa-sun');
+
+  if (themeToggler.classList.contains('fa-sun')) {
+    document.body.classList.add('active');
+  } else {
+    document.body.classList.remove('active');
+  }
+};
+
+    </script>
+
+    <!-- script for window popup -->
+    <script>
+      window.addEventListener("load", function(){
+          setTimeout(
+              function open(event){
+                  document.querySelector(".popup").style.display = "block";
+              },
+              2000
+          )
+      });
+
+      document.querySelector("#close").addEventListener("click", function() {
+          document.querySelector(".popup").style.display = "none";
+      });
+  </script>
   </body>
 </html>
 
